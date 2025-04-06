@@ -35,21 +35,21 @@ server.get("/getProducts", function (req, res) {
     }
   });
 });
-// server.get("/yo",function(req,res){
-//     res.json({response:"I hear you"});
-// });
+server.get("/yo", function (req, res) {
+  res.json({ response: "I hear you" });
+});
 
-// server.get("/TodaysDeals", function(req, res){
-//     var sqlQuery = "CALL `GetAllDeals`";
-//     db.query(sqlQuery,function(error,data){
-//         if(error){
-//             res.json(error);
-//         }
-//         if(data){
-//             res.json(data[0]);
-//         }
-//     });
-// });
+server.get("/TodaysDeals", function (req, res) {
+  var sqlQuery = "CALL `GetAllDeals`";
+  db.query(sqlQuery, function (error, data) {
+    if (error) {
+      res.json(error);
+    }
+    if (data) {
+      res.json(data[0]);
+    }
+  });
+});
 
 // server.post("/addProduct", function (req, res) {
 //     let productName = req.body.productName;
