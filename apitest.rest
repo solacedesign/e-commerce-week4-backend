@@ -1,0 +1,24 @@
+GET http://localhost:4011/yo
+###
+POST http://localhost:4011/hello
+Content-Type: application/json
+
+{
+    "name":"Steve"
+}
+###
+GET http://localhost:4011/TodaysDeals
+
+###
+POST http://localhost:4011/addProduct
+Content-Type: application/json
+
+{
+    "productName":"chair",
+    "price":80.00,
+    "discountAmount":90,
+    "img":"https://m.media-amazon.com/images/I/21ZSS0gMl0L.jpg"
+}
+
+###
+GET http://localhost:4011/getProducts
