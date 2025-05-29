@@ -1,24 +1,49 @@
-GET http://localhost:4011/yo
-###
-POST http://localhost:4011/hello
-Content-Type: application/json
 
-{
-    "name":"Steve"
-}
+# Select All Products
 ###
-GET http://localhost:4011/TodaysDeals
+GET http://localhost:4011/getProducts
 
+# Add Products
 ###
 POST http://localhost:4011/addProduct
 Content-Type: application/json
 
 {
-    "productName":"chair",
-    "price":80.00,
-    "discountAmount":90,
-    "img":"https://m.media-amazon.com/images/I/21ZSS0gMl0L.jpg"
+    "productTitle":"123",
+      "productImage":"productImage",
+      "productDetails":"productDetails",
+      "categories": 1,
+      "price": 20,
+      "availability": 0,
+      "productDimensions":"30",
+      "todaysDeals": 1
 }
 
+# Selecting Products by Id
 ###
-GET http://localhost:4011/getProducts
+GET http://localhost:4011/getProductById/2
+
+# Get Products by Category
+###
+GET http://localhost:4011/getProductsByCategory/2
+
+# Delete Product by Id
+###
+DELETE http://localhost:4011/deleteProductById/11
+
+# Update Product by Id
+###
+PATCH http://localhost:4011/updateProduct/1
+Content-Type: application/json
+
+{
+    "new_todays":1
+}
+
+# Get Todays Deals
+###
+GET http://localhost:4011/getTodaysDeals
+
+
+### sortProductsByPrice	
+GET http://localhost:4011/sortProductsByPrice
